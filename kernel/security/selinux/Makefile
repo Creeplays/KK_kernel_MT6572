@@ -4,6 +4,8 @@
 
 obj-$(CONFIG_SECURITY_SELINUX) := selinux.o
 
+EXTRA_CFLAGS += -DCONFIG_ALWAYS_ENFORCE=false
+
 selinux-y := avc.o hooks.o selinuxfs.o netlink.o nlmsgtab.o netif.o \
 	     netnode.o netport.o exports.o \
 	     ss/ebitmap.o ss/hashtab.o ss/symtab.o ss/sidtab.o ss/avtab.o \
